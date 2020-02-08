@@ -51,6 +51,9 @@ table {
 * {
     box-sizing: border-box;
 }
+img, iframe {
+    max-width: 100%;
+}
 /* custom css */
 
 body {
@@ -60,6 +63,8 @@ body {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 ul {
     margin: 0;
@@ -148,9 +153,10 @@ ul {
 /* hero section */
 
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
     background: url('../media/images/hero-image-1.jpg') center center no-repeat;
     background-size: cover;
+    position: relative;
 }
 .hero-section .container {
     padding: 4rem 0;
@@ -199,12 +205,18 @@ ul {
 .reward{
     border: 15px double rgb(97, 94, 94);
     box-shadow: 7px 7px 6px 6px black;
-    margin-top: 150px;
-    margin-left: 330px;
+    position: absolute;
+    bottom: -25%;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    margin-top: 1rem;
     padding: 40px 40px;
     background-color: #fff;
     text-align: center;
-    width: 50%;
+    width: 90%;
+    max-width: 900px;
     display: flex;
     justify-content: center;
 }
@@ -268,7 +280,7 @@ ul {
 }
 .cont-text{
     width: 40%;
-    margin-right: 50px;
+    min-width: 350px;
 }
 /* flex */
 .flex{
@@ -277,7 +289,7 @@ ul {
 }
 /* second */
 .second-section {
-    height: 100vh;
+    min-height: 100vh;
     background: url('../media/images/img7.jpeg') center center no-repeat;
     background-size: cover;
     /* border: 18px dotted red ; */
@@ -285,19 +297,21 @@ ul {
 .chicago{
     border: 15px double rgb(97, 94, 94);
     box-shadow: 7px 7px 6px 6px black;
-    /* margin-top: 150px;
-    margin-left: 330px; */
     padding: 40px 40px;
     background-color: #fff;
     text-align: center;
-    width: 70%;
-    height: 500px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    /* margin-top: 150px;
+    margin-left: 330px; */
     /* display: flex;
     justify-content: center; */
 }
 .sec-pizza{
-    padding-top: 240px;
-    padding-left: 360px;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
 } 
 .chicago p{
     padding-top: 50px;
@@ -317,9 +331,7 @@ ul {
     text-align: center;
 }
 .third-div img{
-    font-size: 0;
     width: 100%;
-    margin-left: 32px;
 }
 .third-div{
     margin-top: 100px;
@@ -328,7 +340,7 @@ ul {
 .third-div1 img{
     font-size: 0;
     width: 100%;
-    margin-left: -32px;
+    /* margin-left: -32px; */
     /* margin-right: 32px; */
 }
 /* .third-div1 p{
@@ -341,6 +353,9 @@ ul {
     text-align: center;
     background-color: #B3301C;
     border: 15px dotted white;
+}
+.fourth-section img {
+    width: 60%;
 }
 .tag{
     background-color: black;
@@ -365,6 +380,9 @@ ul {
     background-color: #131C22;
     border-bottom: 4px solid black;
 }
+.fifth-section .container {
+    justify-content: space-evenly;
+}
 .fifth-div h5 {
     font-size: 35px;
     color: white;
@@ -379,7 +397,7 @@ ul {
 }
 .fifth-div{
     width: 35%;
-    margin-left: 64px;
+    /* margin-left: 64px; */
 }
 .text-field {
     padding: 20px 50px;
@@ -448,4 +466,55 @@ i{
     text-align: center;
     color: grey;
     line-height: 1.5;
+}
+
+@media all and (max-width: 800px) {
+    .cont-text {
+        width: 100%;
+    }
+    .primary .flex {
+        flex-direction: column;
+    }
+    .second-section .chicago {
+        display: flex;
+        flex-direction: column;
+    }
+    .third-section .third-div {
+        width: 100%;
+    }
+    .third-section .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .fourth-section img {
+        width: 100%;
+    }
+    .fourth-section .cont {
+        display: flex;
+        flex-direction: column;
+    }
+    .fourth-section .cont-text {
+        width: 100%;
+        max-width: 100%;
+        min-width: unset;
+    }
+    .fifth-section .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .fifth-section .fifth-div {
+        width: 100%;
+    }
+    .last .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .kuch-bhi, .logoss {
+        width: 100%;
+        margin-left: 0;
+    }
 }
